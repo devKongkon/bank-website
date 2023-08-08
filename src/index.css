@@ -21,11 +21,11 @@
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    #def9fa 0.89%,
-    #bef3f5 17.23%,
-    #9dedf0 42.04%,
-    #7de7eb 55.12%,
-    #5ce1e6 71.54%,
+    rgb(116, 17, 202) 0.89%,
+    #7411ca 17.23%,
+    #7411ca 42.04%,
+    #7411ca 55.12%,
+    #7411ca 71.54%,
     #33bbcf 100%
   );
   -webkit-background-clip: text;
@@ -39,10 +39,10 @@
     157.81deg,
     #def9fa -43.27%,
     #bef3f5 -21.24%,
-    #9dedf0 12.19%,
-    #7de7eb 29.82%,
-    #5ce1e6 51.94%,
-    #33bbcf 90.29%
+    #5582d6 12.19%,
+    #67d1e9 29.82%,
+    #9e12d6 51.94%,
+    #1e277d 90.29%
   );
 }
 
@@ -81,6 +81,39 @@
 }
 
 .sidebar {
+  position: absolute; 
+  top: 13; /* Position it at the top */
+  right: -100%; /* Start the sidebar off the screen to the right */
+  width: 200px; /* Set a width for the sidebar */
+
+  background-color: #f0f0f0; /* Set a background color */
+
+  /* Define the animation */
+  -webkit-animation: slide-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Define the slide-right animation */
+@-webkit-keyframes slide-right {
+  0% {
+    right: -100%; /* Start off the screen */
+  }
+  100% {
+    right: 0; /* Slide in to the screen */
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    right: -100%; /* Start off the screen */
+  }
+  100% {
+    right: 0; /* Slide in to the screen */
+  }
+}
+
+
+/* .sidebar {
   -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -105,7 +138,7 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-}
+} */
 
 .feature-card:hover {
   background: var(--black-gradient);
